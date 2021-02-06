@@ -1,0 +1,2 @@
+execute unless block ~ ~ ~ #icytnt:explosion_resist run loot spawn ~ ~ ~ mine ~ ~ ~ iron_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1}]}
+execute unless block ~ ~ ~ #icytnt:explosion_resist run setblock ~ ~ ~ air replace

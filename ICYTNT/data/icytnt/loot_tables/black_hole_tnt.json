@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+		  "name": "minecraft:blast_furnace",
+          "functions": [
+            {
+			  "function": "minecraft:set_name",
+			  "name": {"text":"Black Hole TNT","color":"dark_red","italic":false}
+			},
+			{
+              "function": "minecraft:set_nbt",
+              "tag":"{icytnt_id: 1009, CustomModelData: 6441009, HideFlags: 32, BlockEntityTag: {Lock: \"§icytnt\"}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

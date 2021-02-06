@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+		  "name": "minecraft:blast_furnace",
+          "functions": [
+            {
+			  "function": "minecraft:set_name",
+			  "name": {"text":"Chemical TNT","color":"green","italic":false}
+			},
+			{
+              "function": "minecraft:set_nbt",
+              "tag":"{icytnt_id: 1002, CustomModelData: 6441002, HideFlags: 32, BlockEntityTag: {Lock: \"§icytnt\"}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

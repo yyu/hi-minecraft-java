@@ -1,0 +1,8 @@
+{
+    "parent": "icytnt:block/tnt",
+    "textures": {
+        "2": "icytnt:block/demolitioner_table_bottom",
+        "1": "icytnt:block/demolitioner_table_top",
+        "0": "icytnt:block/demolitioner_table_side"
+    }
+}

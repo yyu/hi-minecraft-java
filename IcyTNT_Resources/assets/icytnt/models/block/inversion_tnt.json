@@ -1,0 +1,8 @@
+{
+    "parent": "icytnt:block/tnt",
+    "textures": {
+        "2": "icytnt:block/inversion_tnt_bottom",
+        "1": "icytnt:block/inversion_tnt_top",
+        "0": "icytnt:block/inversion_tnt_side"
+    }
+}

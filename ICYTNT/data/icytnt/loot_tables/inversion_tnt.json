@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+		  "name": "minecraft:blast_furnace",
+          "functions": [
+            {
+			  "function": "minecraft:set_name",
+			  "name": {"text":"Inversion TNT","color":"light_purple","italic":false}
+			},
+			{
+              "function": "minecraft:set_nbt",
+              "tag":"{icytnt_id: 1005, CustomModelData: 6441005, HideFlags: 32, BlockEntityTag: {Lock: \"§icytnt\"}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

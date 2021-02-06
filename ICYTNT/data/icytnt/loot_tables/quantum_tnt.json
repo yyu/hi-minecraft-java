@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+		  "name": "minecraft:blast_furnace",
+          "functions": [
+            {
+			  "function": "minecraft:set_name",
+			  "name": {"text":"Quantum TNT","color":"dark_purple","italic":false}
+			},
+			{
+              "function": "minecraft:set_nbt",
+              "tag":"{icytnt_id: 1004, CustomModelData: 6441004, HideFlags: 32, BlockEntityTag: {Lock: \"§icytnt\"}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

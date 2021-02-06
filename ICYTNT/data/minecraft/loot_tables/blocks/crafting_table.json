@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+	    {
+		  "type": "minecraft:alternatives",
+          "children": [
+			{
+			  "type": "minecraft:item",
+			  "name": "minecraft:crafting_table",
+			  "conditions": [
+				{
+				  "condition": "minecraft:entity_properties",
+				  "entity":"this",
+				  "predicate": {
+				    "type":"player"
+				  }
+				}
+			  ]
+			},
+			{
+			  "type": "minecraft:loot_table",
+			  "name": "icytnt:demolitioner_table"
+			}
+		  ]
+		}
+      ]
+    }
+  ]
+}

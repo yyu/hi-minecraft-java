@@ -1,0 +1,21 @@
+{
+    "parent": "block/blast_furnace",
+    "overrides": [
+		{ "predicate": { "custom_model_data": 6441000 }, "model":"icytnt:block/silk_tnt" },
+		{ "predicate": { "custom_model_data": 6441001 }, "model":"icytnt:block/fortune_tnt" },
+		{ "predicate": { "custom_model_data": 6441002 }, "model":"icytnt:block/chemical_tnt" },
+		{ "predicate": { "custom_model_data": 6441003 }, "model":"icytnt:block/magnetic_tnt" },
+		{ "predicate": { "custom_model_data": 6441004 }, "model":"icytnt:block/quantum_tnt" },
+		
+		{ "predicate": { "custom_model_data": 6441005 }, "model":"icytnt:block/inversion_tnt" },
+		{ "predicate": { "custom_model_data": 6441006 }, "model":"icytnt:block/icy_tnt" },
+		{ "predicate": { "custom_model_data": 6441007 }, "model":"icytnt:block/nuclear_tnt" },
+		{ "predicate": { "custom_model_data": 6441008 }, "model":"icytnt:block/antimatter_tnt" },
+		{ "predicate": { "custom_model_data": 6441009 }, "model":"icytnt:block/black_hole_tnt" },
+		
+		{ "predicate": { "custom_model_data": 6441100 }, "model":"icytnt:block/demolitioner_table" },
+		{ "predicate": { "custom_model_data": 6441101 }, "model":"icytnt:gui/demolitioner_table_gui" },
+		{ "predicate": { "custom_model_data": 6441102 }, "model":"icytnt:gui/gui_blank" },
+		{ "predicate": { "custom_model_data": 6441103 }, "model":"icytnt:black_hole" }
+	]
+}
