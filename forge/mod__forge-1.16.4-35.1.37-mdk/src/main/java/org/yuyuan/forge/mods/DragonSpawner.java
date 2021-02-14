@@ -34,9 +34,9 @@ public class DragonSpawner {
 
             // this is an EntityPlaceEvent, therefore we should have a ServerWorld
             LOGGER.info("YYYYYYYYYY event.getWorld(): {}", event.getWorld().getClass());
-            assert event.getWorld().getClass() == ServerWorld.class;
+            assert event.getWorld() instanceof ServerWorld;
 
-            ServerWorld world = (ServerWorld) event.getWorld();
+            ServerWorld world = (ServerWorld)event.getWorld();
 
             // Also Note: Minecraft.getInstance().world is a ClientWorld
             assert Minecraft.getInstance().world != null;

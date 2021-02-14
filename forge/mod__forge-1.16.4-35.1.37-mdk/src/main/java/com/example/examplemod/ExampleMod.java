@@ -17,6 +17,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.yuyuan.forge.mods.ChatItems;
 import org.yuyuan.forge.mods.DragonSpawner;
+import org.yuyuan.forge.mods.SpawnAlert;
 
 import java.util.stream.Collectors;
 
@@ -41,6 +42,7 @@ public class ExampleMod
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new ChatItems());
         MinecraftForge.EVENT_BUS.register(new DragonSpawner());
+        MinecraftForge.EVENT_BUS.register(new SpawnAlert());
     }
 
     private void setup(final FMLCommonSetupEvent event)
