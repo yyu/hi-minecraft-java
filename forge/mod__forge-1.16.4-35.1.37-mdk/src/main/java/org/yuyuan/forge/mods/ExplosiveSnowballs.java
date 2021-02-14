@@ -1,12 +1,7 @@
 package org.yuyuan.forge.mods;
 
-import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.item.TNTEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.SnowballEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import org.apache.logging.log4j.LogManager;
@@ -24,6 +19,7 @@ public class ExplosiveSnowballs {
         if (!(event.getEntity() instanceof SnowballEntity)) {
             return;
         }
+        LOGGER.info("YYYYYYYYYY - snowball - {}", event);
 
         SnowballEntity snowballEntity = (SnowballEntity)event.getEntity();
 
@@ -32,20 +28,16 @@ public class ExplosiveSnowballs {
         final double z = snowballEntity.getPosZ();
         LOGGER.info("YYYYYYYYYY - {}, {}, {}", x, y, z);
 
-        LOGGER.info("YYYYYYYYYY - snowball - {}", event);
-
         if (!event.getWorld().isRemote) {
-            TNTEntity tnt = new TNTEntity(event.getWorld(), x, y, z, null);
-            tnt.setFuse(80);
+            TNTEntity tntEntity = new TNTEntity(event.getWorld(), x, y, z, null);
+            tntEntity.setFuse(80);
+            tntEntity.setMotion(snowballEntity.getMotion());
+            tntEntity.setRawPosition(
+                    tntEntity.getPosX() + tntEntity.getMotion().getX(),
+                    tntEntity.getPosY() + tntEntity.getMotion().getY(),
+                    tntEntity.getPosZ() + tntEntity.getMotion().getZ());
 
-            tnt.setMotion(snowballEntity.getMotion());
-
-            tnt.setRawPosition(
-                    tnt.getPosX() + tnt.getMotion().getX(),
-                    tnt.getPosY() + tnt.getMotion().getY(),
-                    tnt.getPosZ() + tnt.getMotion().getZ());
-
-            event.getWorld().addEntity(tnt);
+            event.getWorld().addEntity(tntEntity);
             snowballEntity.remove();
         }
     }
