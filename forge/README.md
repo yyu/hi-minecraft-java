@@ -3,3 +3,8 @@
 [ChatItems](mod__forge-1.16.4-35.1.37-mdk/src/main/java/org/yuyuan/forge/mods/ChatItems.java): [potato.mov](potato.mov)
 
 [DragonSpawner](mod__forge-1.16.4-35.1.37-mdk/src/main/java/org/yuyuan/forge/mods/DragonSpawner.java): [dragon.mov](dragon.mov)
+
+
+### Inspired by [SilentChaos512](https://youtu.be/3Uqnb8TqjTY)([code](https://github.com/SilentChaos512/Tutorial-Mod))
+
+
