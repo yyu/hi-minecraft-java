@@ -1,11 +1,14 @@
 package com.example.examplemod;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.material.Material;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -13,12 +16,11 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.yuyuan.forge.mods.ChatItems;
-import org.yuyuan.forge.mods.DragonSpawner;
-import org.yuyuan.forge.mods.ExplosiveSnowballs;
-import org.yuyuan.forge.mods.SpawnAlert;
+import org.yuyuan.forge.mods.*;
 
 import java.util.stream.Collectors;
 
@@ -28,6 +30,9 @@ public class ExampleMod
 {
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
+
+    private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, "examplemod");
+    public static final RegistryObject<Block> ROCK_BLOCK = BLOCKS.register("rock", () -> new Block(Block.Properties.create(Material.ROCK)));
 
     public ExampleMod() {
         // Register the setup method for modloading
@@ -45,6 +50,8 @@ public class ExampleMod
         MinecraftForge.EVENT_BUS.register(new DragonSpawner());
         MinecraftForge.EVENT_BUS.register(new SpawnAlert());
         MinecraftForge.EVENT_BUS.register(new ExplosiveSnowballs());
+
+        BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     private void setup(final FMLCommonSetupEvent event)
@@ -86,7 +93,14 @@ public class ExampleMod
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
             // register a new block here
-            LOGGER.info("HELLO from Register Block");
+            LOGGER.info("YYYYYYYYYY - Register Block - {}", blockRegistryEvent);
+
+//            // GameRegistry.findRegistry(Block.class).register(new EnderBlock(AbstractBlock.Properties.create(Material.IRON)));
+//
+//            AbstractBlock.Properties properties = AbstractBlock.Properties.create(Material.IRON)
+//                    .hardnessAndResistance(10.0F, 5.0F)
+//                    .setLightLevel(x -> 1);
+//            blockRegistryEvent.getRegistry().register(new Block(properties));
         }
     }
 }
