@@ -3,10 +3,23 @@ package org.yuyuan.forge.mods.setup;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.fml.RegistryObject;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.function.Supplier;
 
 public class ModItems {
-    public static final RegistryObject<Item> SILVER_INGOT = Registration.ITEMS.register("silver_ingot", () ->
+    private static final Logger LOGGER = LogManager.getLogger();
+
+    public static final RegistryObject<Item> SILVER_INGOT = registerItem("silver_ingot", () ->
             new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
-    static void register() {}
+    static void register() {
+        LOGGER.info("YYYYYYYYYY - {}", ModItems.class);
+    }
+
+    private static <T extends Item> RegistryObject<T> registerItem(String name, Supplier<T> itemSupplier) {
+        LOGGER.info("YYYYYYYYYY - registering Item {}", name);
+        return Registration.ITEMS.register(name, itemSupplier);
+    }
 }
