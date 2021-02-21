@@ -9,5 +9,5 @@
 
 ### Inspired by [SilentChaos512](https://youtu.be/3Uqnb8TqjTY)([code](https://github.com/SilentChaos512/Tutorial-Mod))
 
-[new item and blocks](mod__forge-1.16.4-35.1.37-mdk/src/main/java/org/yuyuan/forge/mods/setup): [new_item_and_blocks.mov](new_item_and_blocks.mov)
+[new item and blocks](mod__forge-1.16.4-35.1.37-mdk/src/main/java/org/yuyuan/forge/mods/setup): [new_item_and_blocks.mov](new_item_and_blocks.mov) [new_item_and_blocks_silver.mov](new_item_and_blocks_silver.mov)
 
