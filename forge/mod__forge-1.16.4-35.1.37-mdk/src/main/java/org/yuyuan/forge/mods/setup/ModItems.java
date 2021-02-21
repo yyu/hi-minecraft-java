@@ -14,6 +14,9 @@ public class ModItems {
     public static final RegistryObject<Item> SILVER_INGOT = registerItem("silver_ingot", () ->
             new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
+    public static final RegistryObject<Item> TNT_GUN = registerItem("tnt_gun", () ->
+            new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+
     static void register() {
         LOGGER.info("YYYYYYYYYY - {}", ModItems.class);
     }
