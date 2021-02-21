@@ -1,6 +1,7 @@
 package org.yuyuan.forge.mods;
 
 import net.minecraft.entity.item.TNTEntity;
+import net.minecraft.entity.item.minecart.TNTMinecartEntity;
 import net.minecraft.entity.projectile.SnowballEntity;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -29,6 +30,15 @@ public class ExplosiveSnowballs {
         LOGGER.info("YYYYYYYYYY - {}, {}, {}", x, y, z);
 
         if (!event.getWorld().isRemote) {
+//            TNTMinecartEntity tntMinecartEntity = new TNTMinecartEntity(event.getWorld(), x, y, z);
+//            tntMinecartEntity.setMotion(snowballEntity.getMotion());
+//            tntMinecartEntity.setRawPosition(
+//                    tntMinecartEntity.getPosX() + tntMinecartEntity.getMotion().getX(),
+//                    tntMinecartEntity.getPosY() + tntMinecartEntity.getMotion().getY(),
+//                    tntMinecartEntity.getPosZ() + tntMinecartEntity.getMotion().getZ());
+//
+//            event.getWorld().addEntity(tntMinecartEntity);
+
             TNTEntity tntEntity = new TNTEntity(event.getWorld(), x, y, z, null);
             tntEntity.setFuse(80);
             tntEntity.setMotion(snowballEntity.getMotion());
@@ -38,6 +48,7 @@ public class ExplosiveSnowballs {
                     tntEntity.getPosZ() + tntEntity.getMotion().getZ());
 
             event.getWorld().addEntity(tntEntity);
+
             snowballEntity.remove();
         }
     }
