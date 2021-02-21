@@ -5,6 +5,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraftforge.fml.RegistryObject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.yuyuan.forge.mods.TntGun;
 
 import java.util.function.Supplier;
 
@@ -15,7 +16,7 @@ public class ModItems {
             new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
     public static final RegistryObject<Item> TNT_GUN = registerItem("tnt_gun", () ->
-            new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+            new TntGun(new Item.Properties().group(ItemGroup.MATERIALS)));
 
     static void register() {
         LOGGER.info("YYYYYYYYYY - {}", ModItems.class);
