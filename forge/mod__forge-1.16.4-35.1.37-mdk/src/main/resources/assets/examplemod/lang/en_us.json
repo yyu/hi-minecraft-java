@@ -1,5 +1,6 @@
 {
   "block.examplemod.silver_block": "Silver Block",
   "block.examplemod.silver_ore": "Silver Ore",
-  "item.examplemod.silver_ingot": "Silver Ingot"
+  "item.examplemod.silver_ingot": "Silver Ingot",
+  "item.examplemod.tnt_gun": "TNT Gun"
 }
